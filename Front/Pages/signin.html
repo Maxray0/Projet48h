@@ -5,24 +5,25 @@
     <meta charset="UTF-8">
     <title>WorkSpaceNow</title>
     <link href="https://fonts.googleapis.com/css?family=Assistant:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="./login.css">
+    <link rel="stylesheet" href="../css/signin.css">
 
 </head>
 
 <body>
     <section class='login' id='login'>
-        <div>
-            <img width="150" src="logo.png">
+        <div class='head'>
+            <img src="../Images/logo.png">
         </div>
-        <p class='msg'>Welcome back</p>
         <div class='form'>
-            <form>
+            <form id="form">
                 <input type="text" placeholder='E-mail' class='text' id='username' required><br>
+                <br>
                 <input type="password" placeholder='Password' class='password'><br>
-                <a href="#" class='btn-login' id='do-login'>Login</a>
-                <a href="#" class='forgot'>Forgot ?</a>
-                <br><br><br><br>
-                <a href="#" class='create'>Create an account</a>
+                <input type="password" placeholder='Confirm Password' class='password'><br>
+                <br>
+                <input type="text" placeholder='Access School' class='text'><br>
+                <br><br>
+                <a href="#" class='btn-login' id='do-login'>Register</a>
             </form>
         </div>
     </section>
