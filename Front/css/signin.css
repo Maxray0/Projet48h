@@ -81,3 +81,44 @@ body {
 .form {
     margin-bottom: 20px;
 }
+
+@media screen and (max-width: 768px) {
+    /* Pour les écrans ayant une largeur maximale de 768px */
+    .login {
+    padding: 20px;
+    }
+    
+    .login .head .company {
+    font-size: 1.8em;
+    }
+    
+    .login .form input[type=text].text,
+    .login .form input[type=password].password {
+    font-size: 0.9em;
+    }
+    
+    .login .form .btn-login {
+    margin-left: 0;
+    margin-top: 20px;
+    }
+    }
+    
+    @media screen and (max-width: 576px) {
+    /* Pour les écrans ayant une largeur maximale de 576px */
+    .login {
+    padding: 10px;
+    }
+    
+    .login .head .company {
+    font-size: 1.4em;
+    }
+    
+    .login .form input[type=text].text,
+    .login .form input[type=password].password {
+    font-size: 0.8em;
+    }
+    
+    .login .form .btn-login {
+    padding: 5px 1em;
+    }
+    }
