@@ -1,4 +1,7 @@
 <?php
+
+session_start();
+
 $host = 'localhost';
 $dbname = 'workspacenow';
 $username = 'root';
@@ -14,6 +17,7 @@ try {
 
 function RequestData($request)
 {
+
    $host = 'localhost';
    $dbname = 'workspacenow';
    $username = 'root';

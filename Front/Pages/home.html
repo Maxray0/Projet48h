@@ -24,11 +24,11 @@
         </p>
     </div>
     <div class="form">
-        <form action="db_connection.php">
+        <form name="formulaire" method="post" action="test2.php">
             <label for="start">Choose a date:</label>
             <input type="date" id="start" name="trip-start" min="2023-04-14" max="2023-04-21" required><br>
             <label for="appt">Choose a time for your bookings:</label>
-            <input type="time" id="appt" name="appt" required step="3600"><br>
+            <input type="time" id="appt" name="appt" min="8:00" max="18:00" required step="3600"><br>
             <input type="submit" class="submit" id="submit" value="Submit" formaction="../Pages/reservation.html">
         </form>
     </div>
