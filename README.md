@@ -7,19 +7,19 @@
 - Préparation :
 - phpMyAdmin : 
     - Créer la base de donnée workspacenow
-    https://media.discordapp.net/attachments/856518057378709546/1096457773325242389/image.png
+    ![image](https://user-images.githubusercontent.com/92893593/232093186-7f082dd7-768c-4422-908b-a546d2fbced2.png)
     - Importer workspacenow.sql
-    https://cdn.discordapp.com/attachments/856518057378709546/1096458070391001209/image.png
+    ![image](https://user-images.githubusercontent.com/92893593/232093231-2ef8c99d-2fbf-4794-a2e6-97ce527b56ea.png)
 
 - Placement des fichiers :
     - Créer dans le dossier "C:\wamp64\www\" un dossier pour le projet (Ici, Projet48h)
     - Placez les fichiers du projets dans ce dossier.
-    https://media.discordapp.net/attachments/1095979413214081157/1096458456095010916/image.png?width=1292&height=340
+    ![image](https://user-images.githubusercontent.com/92893593/232093288-63c1f15f-ec16-4861-a25a-0710f974c89e.png)
 
 - Navigateur :
     - Accéder à votre localhost et vérifiez la présence du projet
-    https://media.discordapp.net/attachments/856518057378709546/1096462031214878911/image.png
+    ![image](https://user-images.githubusercontent.com/92893593/232093338-34bebed8-00a8-48da-809a-a8ff3b03c70b.png)
     - Votre URL : localhost/nomdevotredossier (ici localhost/Projet48h)
 
 Bien joué :
-https://cdn.discordapp.com/attachments/856518057378709546/1096462487802609754/image.png
+![image](https://user-images.githubusercontent.com/92893593/232093378-3c04d65e-1858-4af1-80cd-dffdfb0236bc.png)
