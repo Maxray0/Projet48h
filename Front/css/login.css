@@ -77,10 +77,11 @@ body {
   }
   .login .create {
     text-decoration: none;
-    color: white;
+    color: rgb(255, 255, 255);
     float: right;
     margin-right: 4.5vh;
   }
+  
   footer {
     position: absolute;
     color: #136a8a;
