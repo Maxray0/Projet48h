@@ -11,7 +11,6 @@
 <header>
     <div class="headers">
         <img src="../Images/logo.png" id="logo">
-        <!--<a href="" class='btn-logout' id='do-logout'>log out</a>-->
         <a href="../Pages/profil.html" class='btn-logout' id='do-logout'>Profil</a>
     </div>
 </header>
@@ -28,7 +27,7 @@
             <label for="start">Choose a date:</label>
             <input type="date" id="start" name="trip-start" min="2023-04-14" max="2023-04-21" required><br>
             <label for="appt">Choose a time for your bookings:</label>
-            <input type="time" id="appt" name="appt" required step="3600"><br>
+            <input type="time" id="appt" min="08:00" max="18:00" name="appt" required step="3600"><br>
             <input type="submit" class="submit" id="submit" value="Submit">
         </form>
     </div>
