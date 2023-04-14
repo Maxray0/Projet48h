@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="../css/home.css" type="text/css">
+    <link rel="stylesheet" href="Front/css/home.css" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WorkSpaceNow</title>
 </head>
 
 <header>
     <div class="headers">
-        <img src="../Images/logo.png" id="logo">
+        <img src="Front/Images/logo.png" id="logo">
         <!--<a href="" class='btn-logout' id='do-logout'>log out</a>-->
-        <a href="../Pages/login.html" class='btn-logout' id='do-logout'>log out</a>
+        <a href="/projet48h/logout" class='btn-logout' id='do-logout'>log out</a>
     </div>
 </header>
 
@@ -24,12 +24,12 @@
         </p>
     </div>
     <div class="form">
-        <form action="db_connection.php">
+        <form action="/Projet48h/dbconnect" method="post">
             <label for="start">Choose a date:</label>
             <input type="date" id="start" name="trip-start" min="2023-04-14" max="2023-04-21" required><br>
             <label for="appt">Choose a time for your bookings:</label>
             <input type="time" id="appt" name="appt" required step="3600"><br>
-            <input type="submit" class="submit" id="submit" value="Submit" formaction="../Pages/reservation.html">
+            <input type="submit" class="submit" id="submit">
         </form>
     </div>
 </body>

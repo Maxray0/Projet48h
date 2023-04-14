@@ -1,23 +1,25 @@
 <?php
 $host = 'localhost';
-$dbname = 'workspacenow';
+$dbname = 'wokspacenow';
 $username = 'root';
-$password = 'root';
+$password = '';
 
 try {
-
    $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+   header('Location:http://localhost/Projet48h/reservation');
 } catch (PDOException $e) {
 
-   die("Impossible de se connecter à la base de données $dbname :" . $e->getMessage());
+   header('Location: http://localhost/Projet48h/home');
+   die();
+   // die("Impossible de se connecter à la base de données $dbname :" . $e->getMessage());
 }
 
 function RequestData($request)
 {
    $host = 'localhost';
-   $dbname = 'workspacenow';
+   $dbname = 'wokspacenow';
    $username = 'root';
-   $password = 'root';
+   $password = '';
    $dsn = "mysql:host=$host;dbname=$dbname";
    $sql = $request;
 
@@ -38,9 +40,9 @@ function RequestData($request)
 function UpdateData($request)
 {
    $host = 'localhost';
-   $dbname = 'workspacenow';
+   $dbname = 'wokspacenow';
    $username = 'root';
-   $password = 'root';
+   $password = '';
    $dsn = "mysql:host=$host;dbname=$dbname";
    $sql = $request;
 

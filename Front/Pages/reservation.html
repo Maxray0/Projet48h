@@ -3,28 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="../css/reservation.css" type="text/css">
+    <link rel="stylesheet" href="Front/css/reservation.css" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WorkSpaceNow</title>
 </head>
 <header>
     <div class="headers">
-        <img src="../Images/logo.png" id="logo">
-        <a href="../Pages/home.html" class='home' id='home'>Home</a>
+        <img src="Front/Images/logo.png" id="logo">
+        <a href="Front/Pages/home.html" class='home' id='home'>Home</a>
     </div>
 </header>
 
 <body>
     <?php include "db_connection.php"; ?>
-    <?php $stmt = RequestData("SELECT * FROM Room WHERE NOT Dates LIKE '%2023-04-15 16:00:00%' AND SchoolId = 1"); ?>
+    <?php include "recupDates.php"; ?>
+    <?php $stmt = RequestData("SELECT * FROM Room WHERE NOT Dates LIKE '%" . $_SESSION["dates"] . "%' AND SchoolId = 1"); ?>
     <?php while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) : ?>
-    <div class="reservation">
-        <p>
-            <?php echo $row['Name']; ?>
-        </p>
-        <a href="" class='reserver' id='do-reserver'>Book</a>
-    </div>
+    <form method="post" action="/Projet48h/checkreserv">
+        <div class="reservation">
+            <p>
+                <?php echo $row['Name']; ?>
+            </p>
+            <input type="hidden" name="roomId" value="<?php echo $row['Id']; ?>">
+            <input type="submit" class='reserver' value="Book" id='do-reserver' />
+        </div>
+    </form>
     <?php endwhile; ?>
 </body>
-
-</html>

@@ -1,1 +1,6 @@
 AddType application/x-httpd-php .htm .html
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule !\.(js|ico|gif|jpg|png|css)$ routes.php
+RewriteRule ^([a-zA-Z0-9-_/]*)$ Index.php
