@@ -15,10 +15,16 @@
 </header>
 
 <body>
+    <?php include "db_connection.php"; ?>
+    <?php $stmt = RequestData("SELECT * FROM Room WHERE NOT Dates LIKE '%2023-04-15 16:00:00%' AND SchoolId = 1"); ?>
+    <?php while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) : ?>
     <div class="reservation">
-        <p>Salle 1</p>
+        <p>
+            <?php echo $row['Name']; ?>
+        </p>
         <a href="" class='reserver' id='do-reserver'>reserver</a>
     </div>
+    <?php endwhile; ?>
 </body>
 
 </html>
