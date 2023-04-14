@@ -3,7 +3,7 @@ import 'package:dart_mysql/dart_mysql.dart';
 Future<MySqlConnection> getConnection() async {
   final settings = ConnectionSettings(
     host: 'localhost',
-    port: 80,
+    port: 3306,
     user: 'root',
     password: '',
     db: 'projet48h',
