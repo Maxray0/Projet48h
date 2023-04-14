@@ -16,7 +16,9 @@ if (isset($_SESSION['email'])) {
         case '/Projet48h/home':
             require __DIR__ . '/Front/Pages/home.html';
             break;
-
+        case '/Projet48h/validation':
+            require __DIR__ . '/Front/Pages/validation.html';
+            break;
         case '/Projet48h/checkreserv':
             require __DIR__ . '/Front/Pages/checkReserv.html';
             break;
