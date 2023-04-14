@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../css/reservation.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorkSpaceNow</title>
+</head>
+<header>
+    <div class="headers">
+        <img src="../Images/logo.png" id="logo">
+        <a href="../Pages/home.html" class='home' id='home'>Home</a>
+    </div>
+</header>
+
+<body>
+    <?php include "db_connection.php"; ?>
+    <?php $stmt = RequestData("SELECT * FROM Room WHERE NOT Dates LIKE '%2023-04-15 16:00:00%' AND SchoolId = 1"); ?>
+    <?php while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) : ?>
+    <div class="reservation">
+        <p>
+            <?php echo $row['Name']; ?>
+        </p>
+        <a href="" class='reserver' id='do-reserver'>Book</a>
+    </div>
+    <?php endwhile; ?>
+</body>
+
+</html>
