@@ -60,6 +60,8 @@ body {
 }
 
 p {
+    margin-top: 8vh;
+    font-size: 3.5vh;
     margin-top: 9vh;
     font-size: 4.5vh;
 }
@@ -82,21 +84,8 @@ p {
     font-size: 3vh;
 }
 
-#firstTranch {
-    margin-top: 7vh;
-    margin-right: 11.5px;
-}
-
-#secondTranch {
-    margin-right: -0.5px;
-}
-
-#thirdTranch {
-    margin-right: 21px;
-}
-
-#fourTranch {
-    margin-right: 21px;
+#start {
+  margin-top: 8vh;
 }
 
 .submit {
