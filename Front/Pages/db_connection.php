@@ -1,32 +1,26 @@
 <?php
 
-session_start();
-
-$Email = "admin@gmail.com";
-$_SESSION["user"] = $Email;
+$Email = $_SESSION['email'];
 
 $host = 'localhost';
-$dbname = 'wokspacenow';
+$dbname = 'workspacenow';
 $username = 'root';
-$password = '';
+$password = 'root';
 
 try {
    $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
-   header('Location:http://localhost/Projet48h/reservation');
 } catch (PDOException $e) {
 
-   header('Location: http://localhost/Projet48h/home');
-   die();
-   // die("Impossible de se connecter à la base de données $dbname :" . $e->getMessage());
+   die("Impossible de se connecter à la base de données $dbname :" . $e->getMessage());
 }
 
 function RequestData($request)
 {
 
    $host = 'localhost';
-   $dbname = 'wokspacenow';
+   $dbname = 'workspacenow';
    $username = 'root';
-   $password = '';
+   $password = 'root';
    $dsn = "mysql:host=$host;dbname=$dbname";
    $sql = $request;
 
@@ -47,9 +41,9 @@ function RequestData($request)
 function UpdateData($request)
 {
    $host = 'localhost';
-   $dbname = 'wokspacenow';
+   $dbname = 'workspacenow';
    $username = 'root';
-   $password = '';
+   $password = 'root';
    $dsn = "mysql:host=$host;dbname=$dbname";
    $sql = $request;
 

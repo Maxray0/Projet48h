@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="../css/profil.css" type="text/css">
+    <link rel="stylesheet" href="Front/css/profil.css" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WorkSpaceNow</title>
 </head>
 
 <header>
     <div class="headers">
-        <img src="../Images/logo.png" id="logo">
+        <img src="Front/Images/logo.png" id="logo">
         <div class="button">
-            <a href="../Pages/login.html" class='btn-logout' id='do-logout'>log out</a>
-            <a href="../Pages/home.html" class='btn-logout' id='do-logout'>Home</a>
+            <a href="/Projet48h/login" class='btn-logout' id='do-logout'>log out</a>
+            <a href="/Projet48h/home" class='btn-logout' id='do-logout'>Home</a>
         </div>
     </div>
 </header>
@@ -22,7 +22,7 @@
     <?php include "db_connection.php"; ?>
     <?php $userData = RequestData("SELECT * FROM User WHERE Email = '$Email'"); ?>
     <?php $row = $userData->fetch(PDO::FETCH_ASSOC); ?>
-    <?php $userId = $row['Id']; ?>
+    <?php $userId = $row['SchoolId']; ?>
     <?php $userEcole = RequestData("SELECT * FROM School WHERE Id = '$userId'"); ?>
     <?php $row2 = $userEcole->fetch(PDO::FETCH_ASSOC); ?>
     <div class="description">
@@ -39,6 +39,9 @@
     </div>
     <?php $resa = explode('/', $row['Reservations']); ?>
     <?php foreach ($resa as $value) : ?>
+    <?php if (strlen($value) < 5) {
+        return;
+    } ?>
     <?php $info = explode(',', $value) ?>
     <div class="reservation">
         <h6>

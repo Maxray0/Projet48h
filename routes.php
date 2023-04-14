@@ -12,7 +12,7 @@
 $request = $_SERVER['REQUEST_URI'];
 session_start();
 if (isset($_SESSION['email'])) {
-    switch($request) {
+    switch ($request) {
         case '/Projet48h/home':
             require __DIR__ . '/Front/Pages/home.html';
             break;
@@ -26,25 +26,28 @@ if (isset($_SESSION['email'])) {
             require __DIR__ . '/Front/Pages/reservation.html';
             break;
         case '/Projet48h/dbconnect':
-            require __DIR__ . '/Front/Pages/db_connection.php';
+            require __DIR__ . '/Front/Pages/reservation.html';
             break;
-        //---------------------------------------------------------------------------------
-        default :
+        case '/Projet48h/profil':
+            require __DIR__ . '/Front/Pages/profil.html';
+            break;
+            //---------------------------------------------------------------------------------
+        default:
             require __DIR__ . '/Front/Pages/home.html';
             break;
     }
 } else {
-    switch($request) {
-        //---------------------------------------------------------------------------------
-        case '/Projet48h/login' :
+    switch ($request) {
+            //---------------------------------------------------------------------------------
+        case '/Projet48h/login':
             require __DIR__ . '/Front/Pages/login.html';
             break;
-        
+
         case '/Projet48h/veryfLogin':
             require __DIR__ . '/src/Model/checkLogin.php';
             break;
-        //---------------------------------------------------------------------------------
-        case '/Projet48h/register' :
+            //---------------------------------------------------------------------------------
+        case '/Projet48h/register':
             require __DIR__ . '/Front/Pages/signin.html';
             break;
 
@@ -52,9 +55,8 @@ if (isset($_SESSION['email'])) {
             require __DIR__ . '/src/Model/checkRegister.php';
             break;
 
-        default :
+        default:
             require __DIR__ . '/Front/Pages/signin.html';
             break;
     }
 }
-?>
