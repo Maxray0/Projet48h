@@ -5,6 +5,7 @@ body {
     min-height: 90vh;
 }
 
+
 .login {
     color: white;
     background: #136a8a;
@@ -22,6 +23,14 @@ body {
     justify-content: center;
     margin-top: auto;
 }
+
+.login .loginnn {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    float: right;
+    margin-right: 9.75vh;
+  }
+ 
 
 .login .head .company {
     font-size: 2.2em;
