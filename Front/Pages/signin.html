@@ -5,36 +5,37 @@
     <meta charset="UTF-8">
     <title>WorkSpaceNow</title>
     <link href="https://fonts.googleapis.com/css?family=Assistant:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="../css/signin.css">
+    <link rel="stylesheet" href="Front/css/signin.css">
 
 </head>
 
 <body>
     <section class='login' id='login'>
         <div class='head'>
-            <img src="../Images/logo.png">
+            <img src="Front/Images/logo.png">
         </div>
         <div class='form'>
-            <form id="form">
-                <input type="text" placeholder='E-mail' class='text' id='username' required><br>
+            <form id="form" action="/Projet48h/veryfRegister" method="post">
+                <input type="text" placeholder='E-mail' class='text' name='email' id='username' required><br>
                 <br>
-                <input type="password" placeholder='Password' class='password'><br>
-                <input type="password" placeholder='Confirm Password' class='password'><br>
+                <input type="password" placeholder='Password' class='password' name='password' required><br>
+                <input type="password" placeholder='Confirm Password' class='password' name='password2'required><br>
                 <br>
-                <input type="text" placeholder='Access School' class='text'><br><br><br>
-                <form action="">
+                <input type="text" placeholder='Access School' class='text' name='schoolId'required><br><br><br>
+                <input type="text" placeholder='User Type' class='text' name='userType' required>
+                <!--<form action="" required>
                     <input type="radio" id="firstTranch" name="fav_language">
                     <label for="firstTranch">Administration</label><br>
                     <input type="radio" id="secondTranch" name="fav_language">
                     <label for="secondTranch">Teachers</label><br>
                     <input type="radio" id="thirdTranch" name="fav_language">
                     <label for="thirdTranch">Students</label><br>
-                </form>
+                </form>-->
                 <br><br>
                 <!--<a href="#" class='btn-login' id='do-login'>Register</a>-->
-                <a href="../Pages/home.html" class='btn-login' id='do-login'>Register</a>
+                <input type='submit' href="/Projet48h/veryfRegister" class='btn-login' id='do-login'>Register</input>
                 <br><br>
-                <a href="../Pages/login.html" class='loginnn'>Login</a>
+                <a href="/projet48h/login" class='loginnn'>Login</a>
             </form>
         </div>
     </section>
