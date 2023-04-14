@@ -1,4 +1,10 @@
 <?php
+
+session_start();
+
+$Email = "admin@gmail.com";
+$_SESSION["user"] = $Email;
+
 $host = 'localhost';
 $dbname = 'wokspacenow';
 $username = 'root';
@@ -16,6 +22,7 @@ try {
 
 function RequestData($request)
 {
+
    $host = 'localhost';
    $dbname = 'wokspacenow';
    $username = 'root';
