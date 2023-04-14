@@ -2,6 +2,9 @@
 
 session_start();
 
+$Email = "admin@gmail.com";
+$_SESSION["user"] = $Email;
+
 $host = 'localhost';
 $dbname = 'workspacenow';
 $username = 'root';

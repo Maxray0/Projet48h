@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../css/profil.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorkSpaceNow</title>
+</head>
+
+<header>
+    <div class="headers">
+        <img src="../Images/logo.png" id="logo">
+        <div class="button">
+            <a href="../Pages/login.html" class='btn-logout' id='do-logout'>log out</a>
+            <a href="../Pages/home.html" class='btn-logout' id='do-logout'>Home</a>
+        </div>
+    </div>
+</header>
+
+<body>
+    <?php include "db_connection.php"; ?>
+    <?php $userData = RequestData("SELECT * FROM User WHERE Email = '$Email'"); ?>
+    <?php $row = $userData->fetch(PDO::FETCH_ASSOC); ?>
+    <?php $userId = $row['Id']; ?>
+    <?php $userEcole = RequestData("SELECT * FROM School WHERE Id = '$userId'"); ?>
+    <?php $row2 = $userEcole->fetch(PDO::FETCH_ASSOC); ?>
+    <div class="description">
+        <p>Mail address:
+            <?php echo $row['Email'] ?><br>
+            Role:
+            <?php echo $row['UserType'] ?><br>
+            School:
+            <?php echo $row2['SchoolName'] ?>
+        </p>
+    </div>
+    <?php $resa = explode('/', $row['Reservations']); ?>
+    <?php foreach ($resa as $value) : ?>
+    <?php $info = explode(',', $value) ?>
+    <div class="reservation">
+        <h6>
+            <?php echo $info[0] ?> has been reserved at
+            <?php echo $info[1] ?> in
+            <?php echo $info[2] ?>
+        </h6>
+    </div>
+    <?php endforeach; ?>
+</body>
+
+</html>

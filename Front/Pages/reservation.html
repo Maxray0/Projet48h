@@ -16,7 +16,7 @@
 
 <body>
     <?php include "db_connection.php"; ?>
-    <?php include "test2.php"; ?>
+    <?php include "recupDates.php"; ?>
     <?php $stmt = RequestData("SELECT * FROM Room WHERE NOT Dates LIKE '%" . $_SESSION["dates"] . "%' AND SchoolId = 1"); ?>
     <?php while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) : ?>
     <form method="post" action="./checkReserv.html">

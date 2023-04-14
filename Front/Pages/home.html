@@ -11,8 +11,7 @@
 <header>
     <div class="headers">
         <img src="../Images/logo.png" id="logo">
-        <!--<a href="" class='btn-logout' id='do-logout'>log out</a>-->
-        <a href="../Pages/login.html" class='btn-logout' id='do-logout'>log out</a>
+        <a href="../Pages/profil.html" class='btn-logout' id='do-logout'>Profil</a>
     </div>
 </header>
 
@@ -20,15 +19,16 @@
     <div class="description">
         <p>WorkSpaceNow is the place to book your workrooms in two-hour time slots. <br>
             8-10am, 10am-12pm, 2-4pm and 4-6pm. If the two hours provided are not enough, <br>
-            be sure to book the same room in two consecutive time slots.
+            be sure to book the same room in two consecutive time slots, and select a full hour.
         </p>
     </div>
     <div class="form">
-        <form name="formulaire" method="post" action="test2.php">
+        <form name="formulaire" method="post" action="recupDates.php">
             <label for="start">Choose a date:</label>
             <input type="date" id="start" name="trip-start" min="2023-04-14" max="2023-04-21" required><br>
             <label for="appt">Choose a time for your bookings:</label>
-            <input type="time" id="appt" name="appt" min="8:00" max="18:00" required step="3600"><br>
+            <input type="time" id="appt" min="08:00" max="18:00" name="appt" min="8:00" max="18:00" required
+                step="3600"><br>
             <input type="submit" class="submit" id="submit" value="Submit" formaction="../Pages/reservation.html">
         </form>
     </div>
